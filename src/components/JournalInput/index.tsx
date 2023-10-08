@@ -8,12 +8,13 @@ interface InputProps extends TextAreaProps  {
 
 };
 
-function JournalInput({ name, placeholder, onChange }: InputProps) {
+function JournalInput({ name, placeholder, onChange, value }: InputProps) {
   return (
     <StyledInput
       id={name}
       onChange={onChange}
       placeholder={placeholder}
+      value={value}
       rows={name === "description" ? 17 : 1}
     />
   );
